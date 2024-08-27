@@ -1,0 +1,32 @@
+.common {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  width: 7em;
+  height: 2.3em;
+  color: whitesmoke;
+}
+
+button:hover {
+  box-shadow: 0 0 10px gray;
+  transition: 0.12s;
+  color: white;
+}
+
+.cell {
+  cursor: pointer;
+  background-color: white;
+}
+
+.outerDiv {
+  display: grid;
+  height: 2em;
+}
+
+.cell:hover {
+  background-color: blue;
+}
+
+

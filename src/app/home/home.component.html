@@ -1,0 +1,21 @@
+<div class="common" style="height: 100vh;">
+  <div class="main p-3">
+    <div class="d-flex justify-content-center" style="height: 5em;">
+      <button *ngIf="result===false" (click)="result = true;border = false;"
+        class="bg-primary rounded border-0 m-3">Final Design</button>
+      <button *ngIf="result===false" (click)="arrayGenerateFunc();"
+        class="bg-danger rounded border-0 m-3">Reset</button>
+      <button *ngIf="result===true" (click)="result = false;border = true;" style="height: 3.2em;"
+        class="bg-primary rounded border-0 m-3">Back To Design</button>
+    </div>
+    <div class="common pt-3" style="background-color: white;height: 20em;">
+      <div class="outerDiv" [style]="gridFunc()">
+        <ng-container *ngFor="let singleArray of bgColorArray;let i=index">
+          <div class="cell" *ngFor="let element of singleArray;let j=index" (click)="clickFunc(i,j)"
+            [ngStyle]="{'background-color':(bgColorArray[i][j] !== true ) ?'white': 'gray','border':(border===true)?'1px solid lightgrey':'1px solid white'}">
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</div>
